@@ -1,0 +1,180 @@
+/* CSS Document */
+
+/*Aufgabe 1*/
+body {
+    background-color: #f9eeb7cd;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 720px 250px 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+    ". g-header g-header ."
+    ". g-nav g-nav ."
+    ". g-main g-aside ."
+    ". g-footer g-footer ."
+     ;
+}
+
+
+ 
+/*Aufgabe 2*/
+h1 {
+    color: #bb24c0;
+    font-family:'Lucida Sans';
+}
+    
+h2 {
+    color: #5d9164;
+}
+
+/*Aufgabe 3*/
+a {
+    color: #4caabf;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #a6a6a6;
+}
+
+/*Aufgabe 4*/
+table {
+    color: #5d9164;
+    border: 5px double #305535;
+}
+
+/*Aufgabe 5*/
+img {
+    height: 100px;
+    width: 200px;
+}
+
+#Strand {
+    float: left;
+    box-shadow: 8px 8px 10px #000000;
+    padding: 10px;
+}
+
+#Cocktail {
+    float: left;
+    border: 10px double #bb24c0;
+    padding: 10px;
+}
+
+#Zimmer {
+    float: left;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+header {
+    border: 1px solid #5d9164c9;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #6ab77455;
+    padding: 10px; /*Innenabstand: oben, rechts, unten, links*/
+    margin: 5px; /*Außenabstand: oben, rechts, unten, links*/
+    text-align: center; /*Inhalt wird mittig ausgerichtet*/
+    grid-area: g-header;
+    }
+    
+    nav {
+    border: 1px solid #e7c157;
+    border-radius: 20px;
+    background-color: #fffbf0;   
+    padding: 10px; 
+    margin: 5px;
+    grid-area: g-nav;
+    }
+    
+    main {
+    border: 1px solid #c5acd2;
+    border-radius: 20px;
+    background-color: #cec4d3;
+    padding: 10px; 
+    margin: 5px; 
+    grid-area: g-main;
+    }
+
+    section{
+        border: 1px solid #5d9164c9;
+        border-radius: 20px 20px 20px 20px;
+        background-color: #5d916455;
+        padding: 0px 0px 0px 20px; 
+        margin: 10px 0px 10px 0px;
+        }
+    
+    aside {
+        display: flex;
+        border: 1px solid #8a9da8;
+        border-radius: 20px;
+        background-color: #c4ced3;
+        height: auto;
+        padding: 10px; 
+        margin: 5px; 
+        grid-area: g-aside;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    } 
+       
+    footer{
+    border: 1px solid #8a9da8;
+    border-radius: 20px;
+    background-color: #e4ebf2;
+    padding: 5px; 
+    margin: 5px;
+    grid-area: g-footer;
+    } 
+
+    #Inhalt {
+        border: none; /*entfernt den Rahmen*/
+        height: 100%;
+        width: 100%;
+    }
+    
+    .Hintergrund {
+        background-color: #cec4d3;
+        display: contents; /*Inhalt passt sich wieder der main-box an*/
+    }
+
+    nav>ul {
+        list-style-type: none; /* Aufzählungspunkte ausblenden */
+        display: flex; /* Flexbox-Container */
+    }
+    
+    nav a {
+        background-color: #dbd3bd87; 
+        text-decoration: none; /* keine Unterstreichung */
+        padding: 10px; /* Abstand im den Link */
+    }
+          
+    nav a:hover {
+        background-color: #6ab77455;
+    }
+        /*Mobile-Last-Ansicht*/
+@media screen and (max-width: 960px) {
+    body {
+     grid-template-columns: 75% 25%;
+     grid-template-areas:
+       "  g-header g-header "
+       "  g-nav g-nav  "
+       "  g-main g-aside  "
+       "  g-footer g-footer  ";
+
+   }
+}
+
+   /*Mobile-Last-Ansicht*/
+@media screen and (max-width: 500px) {
+body {
+grid-template-rows: 200px auto 1fr 1fr 100px;
+grid-template-columns: 100%;
+grid-template-areas:
+" g-header "
+" g-nav  "
+" g-main "
+" g-aside"
+" g-footer";
+}
+
+}
